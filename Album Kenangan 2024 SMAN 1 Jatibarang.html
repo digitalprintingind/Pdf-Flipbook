@@ -56,8 +56,15 @@
   </script>
 
   <style>
-@media all and (orientation:landscape)
-{
+@media only screen and (orientation:landscape){
+#read {
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+-ms-transform: rotate(0deg);
+transform: rotate(0deg);
+}
+}
     body {
       background-color: #f6f6f6;
     }
@@ -83,7 +90,6 @@
 	margin: auto;
 	padding: 2px;
 	}
-}
   </style>
 
   </head>
