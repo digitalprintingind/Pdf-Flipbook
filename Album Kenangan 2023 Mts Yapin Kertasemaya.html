@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <link rel="shortcut icon" href="images/D'SIDE GRAPHIA_Logo.svg">
+  <title>View PDF</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- AJAX -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+  <!-- costume css -->
+  <link rel="stylesheet" type="text/css" href="css/flipbook.style.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <!-- Bootstrap Css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <!-- Include JS -->
+  <script src="js/flipbook.min.js"></script>
+
+  <script type="text/javascript">
+
+      $(document).ready(function () {
+          $("#read").flipBook({
+            //Layout Setting
+            pdfUrl:'https://digitalprintingind.github.io/Pdf-Flipbook/pdf/Album Kenangan 2023 Mts Yapin Kertasemaya.pdf',
+            lightBox:true,
+            layout:3,
+            currentPage:{vAlign:"bottom", hAlign:"left"},
+            // BTN SETTING
+            btnShare : {enabled:false},
+            btnPrint : {
+              hideOnMobile:true
+            },
+            btnDownloadPages : {
+              enabled: true,
+              title: "Download pages",
+              icon: "fa-download",
+              icon2: "file_download",
+              url: "images/pdf.rar",
+              name: "allPages.zip",
+              hideOnMobile:false
+            },
+            btnColor:'rgb(255,120,60)',
+            sideBtnColor:'rgb(255,120,60)',
+            sideBtnSize:60,
+            sideBtnBackground:"rgba(0,0,0,.7)",
+            sideBtnRadius:60,
+            btnSound:{vAlign:"top", hAlign:"left"},
+            btnAutoplay:{vAlign:"top", hAlign:"left"}
+        });
+      })
+  </script>
+
+  <style>
+    body {
+      background-color: #f6f6f6;
+    }
+    #author {
+      font-size: 15px;
+      font-weight: bold;
+      color: #0186c9;
+    }
+    #date {
+      margin-left: 10px;
+      font-size: 15px;
+      color: #819196;
+    }
+    #size {
+      font-size: 15px;
+      color: #819196;
+    }
+    #description {
+      margin-top: 20px;
+      font-weight: lighter;
+    }
+	.center-content	{
+	margin: auto;
+	padding: 2px;
+	}
+  </style>
+
+  </head>
+
+  <body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" alt="D'SIDE GRAPHIA LOGO" width="150">
+    </a>
+  </nav>
+  <!-- End Of Navbar -->
+
+  <br><br><br><br><br>
+
+  <!-- PDF INFORMATION -->
+  <section class="info" id="info">
+    <div class="container">
+      <div class="card shadow">
+        <div class="row">
+          <div class="col-md-3 center-content">
+            <img src="images/book2/Album Kenangan 2023 Mts Yapin Kertasemaya.jpg" class="w-100 book-1">
+          </div>
+          <div class="col-md-7 mt-3">
+            <!-- Info -->
+            <h3 id="title">Album Kenangan 2023 Mts Yapin Kertasemaya</h3>
+            <p id="author" class="d-inline">Designer Ridwan</p>
+            <p id="date" class="d-inline">26 November 2023</p>
+            <p id="size"><i class="fas fa-file "></i> File Size <b>1MB</b></p>
+            <!-- Button -->
+            <div class="button">
+              <a id="read" class="btn btn-primary mt-2 text-white">Baca PDF <i class="fas fa-book-reader fa-lg"></i></a>
+              <a target="_blank" href="pdf/Album Kenangan 2023 Mts Yapin Kertasemaya.pdf" class="btn btn-primary mt-2 text-white" download>Unduh PDF <i class="fas fa-download fa-lg"></i></a>
+            </div>
+            <!-- Description -->
+            <p id="description">
+			<!-- Isi Description   -->
+			</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OF PDF INFORMATION -->
+
+  <!-- Footer -->
+  <section id="footer" class="footer mt-5">
+    <div class="container">
+      <div class="row text-center text-xs-center text-sm-left text-md-left">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h5>Tentang D'SIDE GRAPHIA</h5>
+          <ul class="list-unstyled quick-links">
+          <li><a href="#"><i class="fa fa-angle-double-right"></i>About</a></li>
+            <li><a href="#"><i class="fa fa-angle-double-right"></i>Pejabat Struktural</a></li>
+            <li><a href="#"><i class="fa fa-angle-double-right"></i>Rencana Strategis</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h5>Layanan Publik</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a href="#"><i class="fa fa-angle-double-right"></i>Pengaduan Masyarakat</a></li>
+            <li><a href="#"><i class="fa fa-angle-double-right"></i>LHKPN</a></li>
+            <li><a href="#"></i>Gratifikasi</a></li>
+            <li><a href="#"><i class="fa fa-angle-double-right"></i>Informasi Publik</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h5>Kontak D'SIDE GRAPHIA</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a target="_blank" href="https://www.google.com/maps/dir//D'SIDE+GRAPHIA+DIGITAL+PRINTING,+Cadangpinggan,+Kabupaten+Indramayu,+Jawa+Barat/@-6.5785534,107.9907754,10z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e6ec3d647f26fc3:0xae8280847c3f511b!2m2!1d108.3515338!2d-6.5656809?entry=ttu"><i class="fas fa-map-marker-alt"></i></i>Perc. D'SIDE GRAPHIA Jl. By Pass Desa Cadangpinggan, Kec. Sukagumiwang, Kabupaten Indramayu, Jawa Barat 45274</a></li>
+            <li><a target="_blank" href="7301966"><i class="fas fa-phone"></i>(0234) 7301966</a></li>
+            <li><a target="_blank" href="wa.me/6287838333993"><i class="fas fa-whatsapp"></i>+62 87838333993</a></li>
+            <li><a target="_blank" href="mailto:dsidegraphia@gmail.com"><i class="fas fa-envelope"></i>dsidegraphia@gmail.com</a></li>
+            <!--<li><a href="#"><i class="fas fa-headset"></i></i>Call Center: 198</a></li>-->
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p class="h6">Hak Cipta © 2017 PT. DSAIN KREASI MANDIRI</p>
+        </div>
+        </hr>
+      </div>
+    </div>
+  </section>
+  <!-- End Of Footer -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  </body>
+
+</html>
