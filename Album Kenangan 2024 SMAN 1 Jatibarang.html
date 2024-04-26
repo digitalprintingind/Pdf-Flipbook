@@ -54,6 +54,33 @@
         });
       })
   </script>
+<script>
+function updateLockButton() {
+  const lockButton = document.getElementById("button");
+  const newOrientation = getOppositeOrientation();
+  lockButton.textContent = `Lock to ${newOrientation}`;
+}
+
+function getOppositeOrientation() {
+  return screen
+    .orientation
+    .type
+    .startsWith("portrait") ? "landscape" : "portrait";
+}
+
+async function rotate(lockButton) {
+  if (!document.fullscreenElement) {
+    await document.documentElement.requestFullscreen();
+  }
+  const newOrientation = getOppositeOrientation();
+  await screen.orientation.lock(newOrientation);
+  updateLockButton(lockButton);
+}
+
+screen.orientation.addEventListener("change", updateLockButton);
+
+window.addEventListener("load", updateLockButton);
+</script>
 
   <style>
     body {
@@ -81,23 +108,17 @@
 	margin: auto;
 	padding: 2px;
 	}
-#desc {
-	position:absolute;
-	margin-top:5px;
-	margin-left:5px;
-	padding:5px;
-	font-weight: lighter;
-	font-size: 15px;
-	color: white;
-	background:black;
-	z-index:9999;
-}
   </style>
 
   </head>
 
   <body>
-<div class="desc">Untuk pengguna mobile, disarankan Rotasi Layar Lanscap</div>
+<button onclick="rotate(this)" id="button">
+  Lock to...
+</button>
+<button onclick="screen.orientation.unlock()">
+  Unlock
+</button>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
     <a class="navbar-brand" href="index.html">
