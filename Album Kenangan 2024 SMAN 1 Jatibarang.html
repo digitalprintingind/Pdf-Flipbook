@@ -113,12 +113,7 @@ window.addEventListener("load", updateLockButton);
   </head>
 
   <body>
-<button onclick="rotate(this)" id="button">
-  Lock to...
-</button>
-<button onclick="screen.orientation.unlock()">
-  Unlock
-</button>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
     <a class="navbar-brand" href="index.html">
@@ -151,6 +146,12 @@ window.addEventListener("load", updateLockButton);
             <!-- Description -->
             <p id="description">
 			<!-- Isi Description   -->
+		    <button onclick="rotate(this)" id="button">
+  Lock to...
+</button>
+<button onclick="screen.orientation.unlock()">
+  Unlock
+</button>
 			</p>
           </div>
         </div>
